@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sowndarya C - Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; background: #f5f5f5; color: #2c3e50; }
+    .container { max-width: 800px; margin: auto; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    h1 { color: #3498db; }
+    .section { margin-bottom: 20px; }
+    .section h2 { border-bottom: 2px solid #3498db; padding-bottom: 5px; }
+    .contact a { color: #3498db; text-decoration: none; }
+    button { margin-top: 20px; padding: 10px 15px; background: #3498db; color: #fff; border: none; border-radius: 6px; cursor: pointer; }
+    #qrcode { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Sowndarya C</h1>
+    <p class="contact">
+      📧 <a href="mailto:sowndaryac25@gmail.com">sowndaryac25@gmail.com</a> | 
+      📱 +91-9740407912 | 
+      📍 Mysore, Karnataka – 570010 <br>
+      🌐 <a href="https://github.com/SowndaryaC09">GitHub</a> | 
+      💼 <a href="https://www.linkedin.com/in/sowndarya-c-596aa0341/">LinkedIn</a>
+    </p>
+
+    <div class="section">
+      <h2>Career Objective</h2>
+      <p>To pursue a challenging career in Computer Science where I can apply my knowledge in deep learning, machine learning, and web development, while continuously learning and contributing to organizational growth.</p>
+    </div>
+
+    <div class="section">
+      <h2>Education</h2>
+      <ul>
+        <li><b>MCA</b> – Pursuing (Expected 2025)</li>
+        <li><b>B.Sc in PMCS</b> – 2022</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Project</h2>
+      <ul>
+        <li>
+          <b>Novel Deep Learning Architecture for Butterfly Classification</b><br>
+          - Developed a hybrid architecture combining EfficientNet deep learning features with handcrafted shape & color features.<br>
+          - Evaluated performance using accuracy, precision, recall, and F1-score.<br>
+          - Visualized results using confusion matrix and classification report.<br>
+          - Tools & Technologies: Python, TensorFlow/Keras, PyTorch, OpenCV, TPOT, Matplotlib.
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Technical Skills</h2>
+      <p>Programming: Python, C, C++<br>
+         Deep Learning: TensorFlow, PyTorch, Keras<br>
+         Machine Learning: Scikit-learn, TPOT AutoML<br>
+         Web Development: Django, HTML, CSS, JavaScript<br>
+         Tools: GitHub, Jupyter, VS Code, PyCharm</p>
+    </div>
+
+    <div class="section">
+      <h2>Strengths</h2>
+      <ul>
+        <li>Quick learner with strong analytical and problem-solving skills</li>
+        <li>Good communication and teamwork abilities</li>
+        <li>Ability to adapt to new technologies</li>
+      </ul>
+    </div>
+
+    <button onclick="downloadPDF()">⬇️ Download PDF</button>
+    <button onclick="makeQR()">🧾 Show QR for this Page</button>
+    <div id="qrcode"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script>
+    function makeQR() {
+      const url = window.location.href;
+      document.getElementById("qrcode").innerHTML = "";
+      new QRCode(document.getElementById("qrcode"), {
+        text: url,
+        width: 128,
+        height: 128
+      });
+    }
+    function downloadPDF() {
+      window.print();
+    }
+  </script>
+</body>
+</html>
